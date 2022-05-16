@@ -1,0 +1,12 @@
+---
+- name: Remove symlink
+  become: true
+  ansible.builtin.file:
+    path: "{{ composer_path }}/composer"
+    state: absent
+
+- name: Uninstall composer
+  become: true
+  ansible.builtin.file:
+    path: "{{ composer_path }}/composer.phar"
+    state: absent

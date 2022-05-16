@@ -1,0 +1,8 @@
+---
+- name: Install composer
+  ansible.builtin.include_tasks: install.yml
+  when: composer_uninstall == false
+
+- name: Uninstall composer
+  ansible.builtin.include_tasks: uninstall.yml
+  when: composer_uninstall == true

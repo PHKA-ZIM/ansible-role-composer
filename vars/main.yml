@@ -1,0 +1,6 @@
+---
+composer_url: https://getcomposer.org/download/latest-stable/composer.phar
+composer_path: "/usr/local/bin/"
+composer_file_owner: root
+composer_file_group: root
+composer_file_mode: "755"

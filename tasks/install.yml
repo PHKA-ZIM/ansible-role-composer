@@ -5,10 +5,8 @@
     url: '{{ composer_url }}'
     checksum: 'sha256:{{ composer_url }}.sha256sum'
     dest: "{{ composer_path }}/composer.phar"
-    owner: "{{ composer_file_owner }}"
-    group: "{{ composer_file_group }}"
     mode: "{{ composer_file_mode }}"
-    force: "{{ composer_update }}"
+    force: "{{ composer_update | bool }}"
 
 - name: Symlink composer.phar
   become: true

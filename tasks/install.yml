@@ -2,8 +2,8 @@
 - name: Install composer latest-stable
   become: true
   ansible.builtin.get_url:
-    url: '{{ composer_url }}'
-    checksum: 'sha256:{{ composer_url }}.sha256sum'
+    url: "{{ composer_url }}"
+    checksum: "sha256:{{ composer_url }}.sha256sum"
     dest: "{{ composer_path }}/composer.phar"
     mode: "{{ composer_file_mode }}"
     force: "{{ composer_update | bool }}"
